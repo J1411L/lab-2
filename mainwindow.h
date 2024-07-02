@@ -16,6 +16,7 @@
 #include <QPixmap>
 #include <QBrush>
 
+
 class MainWindow : public QMainWindow {
     Q_OBJECT
 

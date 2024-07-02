@@ -24,16 +24,16 @@ public:
     ~MainWindow();
 
 private:
-    QSqlDatabase db;
-    QVBoxLayout *layout;
-    QVector<QPushButton*> buttons;
-    QStackedWidget *stackedWidget;
-    QStringList tableNames;
+    QSqlDatabase db; // Объект подключения к базе данных
+    QVBoxLayout *layout; // Основной компоновщик макета
+    QVector<QPushButton*> buttons; // Вектор кнопок для навигации по таблицам
+    QStackedWidget *stackedWidget; // Виджет для отображения представлений таблиц
+    QStringList tableNames; // Список имен таблиц
 
-    void setupDatabase();
-    void createTableButtons(QVBoxLayout *buttonLayout, QVector<QPushButton*> &buttons, const QStringList &tableNames);
-    void createTableTab(QStackedWidget *stackedWidget, QSqlRelationalTableModel *model, const QString &tableName);
-    void setupMainWindow();
+    void setupDatabase(); // Настройка подключения к базе данных
+    void createTableButtons(QVBoxLayout *buttonLayout, QVector<QPushButton*> &buttons, const QStringList &tableNames); // Создание кнопок для навигации по таблицам
+    void createTableTab(QStackedWidget *stackedWidget, QSqlRelationalTableModel *model, const QString &tableName); // Создание вкладки для отображения таблицы
+    void setupMainWindow(); // Настройка основного окна приложения
 };
 
 #endif // MAINWINDOW_H
